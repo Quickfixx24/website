@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quickfixx | Premium Vehicle Booking & Home Services</title>
+    <meta name="description" content="Quickfixx delivers fast, reliable vehicle booking & home services in Bangladesh. Professional, verified, and safe.">
+    <!-- Open Graph Tags for Social Media -->
+    <meta property="og:title" content="Quickfixx | Premium Services in Bangladesh">
+    <meta property="og:description" content="Professional vehicle booking & home repair services. Fast, reliable, verified.">
+    <meta property="og:image" content="https://quickfixx24.github.io/website/assets/images/logo-main.png">
+    <meta property="og:url" content="https://quickfixx24.github.io/website/">
+    <meta property="og:type" content="website">
+    
     <link rel="stylesheet" href="brand-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -60,6 +68,41 @@
         
         .logo-text span {
             color: var(--color-accent-gold);
+        }
+        
+        /* Live Status Indicator */
+        .live-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 15px;
+            background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 15px;
+            animation: pulse-green 2s infinite;
+        }
+        
+        @keyframes pulse-green {
+            0% { opacity: 0.9; }
+            50% { opacity: 1; }
+            100% { opacity: 0.9; }
+        }
+        
+        .live-status::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
         }
         
         /* Main Navigation */
@@ -359,11 +402,53 @@
             font-size: 1.2rem;
         }
         
+        /* Social Media Footer Section */
+        .footer-social {
+            margin-top: 10px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--color-accent-gold);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+        }
+        
+        [data-theme="dark"] .social-icon {
+            background-color: rgba(30, 41, 59, 0.7);
+            color: var(--color-text-dark);
+        }
+        
+        [data-theme="dark"] .social-icon:hover {
+            background-color: var(--color-accent-gold);
+            color: var(--color-primary);
+        }
+        
         /* Footer */
         .site-footer {
             background-color: var(--color-primary);
             color: var(--color-primary-dark);
             padding: 70px 20px 30px;
+            position: relative;
         }
         
         [data-theme="dark"] .site-footer {
@@ -432,6 +517,42 @@
             font-size: 0.9rem;
             max-width: 1200px;
             margin: 0 auto;
+        }
+        
+        .current-year {
+            color: var(--color-accent-gold);
+            font-weight: 600;
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
         }
         
         /* Mobile Menu */
@@ -536,6 +657,18 @@
                 gap: 25px;
                 justify-content: center;
             }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -554,19 +687,28 @@
             .footer-grid {
                 gap: 40px;
             }
+            
+            .live-status {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8801537313652" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
     <!-- Header -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo-container">
-                <img src="assets/images/logo-main.png" alt="Quickfixx" class="logo-img" id="mainLogo">
-                <div class="logo-text">Quick<span>fixx</span></div>
+                <img src="assets/images/logo-main.png" alt="Quickfixx" class="logo-img" id="mainLogo" loading="lazy">
+                <div class="logo-text">Quick<span>fixx</span><span class="live-status">Live</span></div>
             </a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
                 <i class="fas fa-bars"></i>
             </button>
             
@@ -722,7 +864,7 @@
                 <h3 style="margin-bottom: 25px; color: var(--color-primary);">Quick Booking Form</h3>
                 <!-- Replace with your actual Google Form link -->
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSda2e2MaEqLuCPQULHbtaN3wlQ2CExDl9IuReBXFMSUcriZ1g/viewform?embedded=true"
-                    width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">
+                    width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Quickfixx Booking Form">
                     Loading…
                 </iframe>
                 <p style="text-align: center; margin-top: 20px; color: var(--color-text-light);">
@@ -738,11 +880,33 @@
             <div>
                 <div class="footer-logo">Quick<span>fixx</span></div>
                 <p>Premium vehicle booking and home service solutions across Bangladesh. Fast, reliable, and verified.</p>
-                <p style="margin-top: 20px;">
-                    <a href="private-dashboard.html" style="color: var(--color-accent-gold); font-weight: 500;">
-                        <i class="fas fa-cog"></i> Admin Dashboard
-                    </a>
-                </p>
+                
+                <!-- Social Media Icons -->
+                <div class="footer-social">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/Quickfixx24" target="_blank" rel="noopener noreferrer" 
+                           aria-label="Follow us on Facebook" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/Quickfixx24" target="_blank" rel="noopener noreferrer"
+                           aria-label="Follow us on Instagram" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@Quickfixx24" target="_blank" rel="noopener noreferrer"
+                           aria-label="Follow us on TikTok" class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/8801537313652" target="_blank" rel="noopener noreferrer"
+                           aria-label="Message us on WhatsApp" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://m.me/Quickfixx24" target="_blank" rel="noopener noreferrer"
+                           aria-label="Message us on Messenger" class="social-icon">
+                            <i class="fab fa-facebook-messenger"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             
             <div>
@@ -768,8 +932,14 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2025 Quickfixx. All rights reserved. BY HRK | <a href="#privacy" style="color: var(--color-accent-silver);">Privacy Policy</a> • <a href="#terms" style="color: var(--color-accent-silver);">Terms of Service</a></p>
-            <p style="margin-top: 10px; font-size: 0.85rem;">Designed for Bangladesh with <i class="fas fa-heart" style="color: #EF4444;"></i></p>
+            <p>&copy; <span id="currentYear" class="current-year"></span> Quickfixx Premium Services. All rights reserved. BY HRK | 
+               <a href="#privacy" style="color: var(--color-accent-silver);">Privacy Policy</a> • 
+               <a href="#terms" style="color: var(--color-accent-silver);">Terms of Service</a>
+            </p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">
+                Designed for Bangladesh with <i class="fas fa-heart" style="color: #EF4444;"></i> • 
+                <span id="pageLoadTime"></span>
+            </p>
         </div>
     </footer>
 
@@ -846,10 +1016,9 @@
             });
         });
         
-        // Logo updater functionality - This will be enhanced in the admin panel
+        // Logo updater functionality
         const mainLogo = document.getElementById('mainLogo');
         
-        // Check for logo updates in localStorage (simple implementation)
         function checkForLogoUpdate() {
             const logoUpdate = localStorage.getItem('quickfixx-logo-update');
             if (logoUpdate) {
@@ -858,11 +1027,34 @@
             }
         }
         
-        // Check on page load
-        checkForLogoUpdate();
+        // Automatic Copyright Year Update
+        function updateCopyrightYear() {
+            const currentYear = new Date().getFullYear();
+            document.getElementById('currentYear').textContent = currentYear;
+        }
         
-        // Simple notification for logo update system
-        console.log('Logo update system: Ready. Admin panel can update logos across site.');
+        // Page Load Time
+        function showPageLoadTime() {
+            const loadTime = window.performance.timing;
+            const pageLoadTime = loadTime.loadEventEnd - loadTime.navigationStart;
+            const loadTimeElement = document.getElementById('pageLoadTime');
+            
+            if (pageLoadTime > 0) {
+                loadTimeElement.textContent = `Page loaded in ${pageLoadTime}ms`;
+            }
+        }
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCopyrightYear();
+            checkForLogoUpdate();
+            showPageLoadTime();
+            
+            // Log console message
+            console.log('🚀 Quickfixx - Social Media Integration Complete');
+            console.log('📱 Follow us: @Quickfixx24 on all platforms');
+            console.log('📞 WhatsApp: +8801537313652');
+        });
     </script>
 </body>
 </html>
