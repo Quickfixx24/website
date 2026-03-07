@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /private-dashboard.html
+Disallow: /staff-login.html
+Disallow: /admin-logo-update.html
+Disallow: /dashboard.html
+
+Sitemap: https://www.quickfixx24.com/sitemap.xml
