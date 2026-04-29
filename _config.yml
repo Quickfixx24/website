@@ -1,0 +1,34 @@
+title: "QuickFixx24"
+description: "Staff Verification Portal — QuickFixx24, Chittagong"
+baseurl: "/website"
+url: "https://quickfixx24.github.io"
+
+# ── Collections ──────────────────────────────────────────────────
+collections:
+  staff_members:
+    output: true
+    permalink: /verify/:basename/
+
+# ── Defaults ─────────────────────────────────────────────────────
+defaults:
+  - scope:
+      path: ""
+      type: "staff_members"
+    values:
+      layout: "verification"
+
+# ── Build ─────────────────────────────────────────────────────────
+markdown: kramdown
+theme: ~
+plugins:
+  - jekyll-feed
+
+# ── Exclude from processing ───────────────────────────────────────
+exclude:
+  - "*.css"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - node_modules
+  - tools/
+  - "README.md"
+  - "*.py"
