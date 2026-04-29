@@ -1,0 +1,16 @@
+layout: verification
+name:               "Md. Karim Hossain"
+designation:        "Senior Driver"
+designation_bengali:"সিনিয়র চালক"
+department:         "Vehicle Services"
+employee_id:        "QFX-DRV-0001"
+join_date:          "January 2023"
+blood_group:        "B+"
+phone:              "+880 1805-455811"
+emergency_contact:  "+880 1805-455812"
+service_area:       "Chittagong City"
+location:           "CU Gate Base"
+valid_until:        "December 2025"
+certifications:     "BRTA Licensed, Defensive Driving, First Aid"
+photo_url:          ""
+---
