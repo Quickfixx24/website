@@ -1,0 +1,454 @@
+---
+layout: null
+permalink: /verify/
+---
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unauthorized Access — QuickFixx24</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="https://www.quickfixx24.com/assets/images/logo-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --navy:      #0A0F1E;
+      --navy2:     #111827;
+      --gold:      #F59E0B;
+      --gold2:     #D97706;
+      --green:     #10B981;
+      --red:       #EF4444;
+      --bg:        #F8FAFC;
+      --surface:   #FFFFFF;
+      --text:      #1E293B;
+      --text2:     #64748B;
+      --border:    #E2E8F0;
+      --font-head: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', sans-serif;
+      --shadow:    0 4px 24px rgba(10,15,30,.08);
+      --shadow-lg: 0 12px 40px rgba(10,15,30,.14);
+      --radius:    14px;
+      --tr:        all .3s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg:      #0A0F1E;
+      --surface: #111827;
+      --text:    #F1F5F9;
+      --text2:   #94A3B8;
+      --border:  #1E293B;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background .3s, color .3s;
+      min-height: 100dvh;
+      display: flex; flex-direction: column;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; }
+
+    /* ── Header — exact homepage ── */
+    .site-header {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0; transition: var(--tr);
+    }
+    [data-theme="dark"] .site-header { background: rgba(10,15,30,.92); }
+    .site-header.scrolled { padding: 10px 0; box-shadow: var(--shadow); }
+
+    .hdr {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo img { height: 44px; width: auto; border-radius: 8px; }
+    .logo-txt { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: var(--navy); }
+    [data-theme="dark"] .logo-txt { color: #F1F5F9; }
+    .logo-txt .gld { color: var(--gold); }
+    .logo-txt .grn { color: var(--green); font-size: 13px; vertical-align: super; }
+
+    .nav-links { display: flex; gap: 28px; align-items: center; list-style: none; }
+    .nav-links a { font-size: 15px; font-weight: 500; color: var(--text); transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .hdr-actions { display: flex; align-items: center; gap: 10px; }
+
+    .btn-book {
+      background: var(--gold); color: var(--navy);
+      font-weight: 700; font-size: 14px;
+      padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer;
+      transition: var(--tr); white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-book:hover { background: var(--gold2); transform: translateY(-1px); }
+
+    .theme-toggle {
+      background: none; border: 1.5px solid var(--border);
+      border-radius: 8px; width: 38px; height: 38px;
+      cursor: pointer; color: var(--text); font-size: 16px; transition: var(--tr);
+    }
+    .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2.5px; background: var(--text); border-radius: 2px; transition: var(--tr); }
+
+    .mobile-nav { display: none; flex-direction: column; background: var(--surface); border-top: 1px solid var(--border); padding: 20px 24px; gap: 14px; }
+    .mobile-nav a { font-size: 16px; font-weight: 500; color: var(--text); padding: 8px 0; border-bottom: 1px solid var(--border); }
+    .mobile-nav a:last-child { border: none; color: var(--gold); font-weight: 700; }
+    .mobile-nav.open { display: flex; }
+
+    /* ── Main Content ── */
+    .page-main {
+      flex: 1;
+      margin-top: 73px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 60px 24px 70px;
+    }
+
+    .content-wrap {
+      max-width: 520px; width: 100%;
+      text-align: center;
+      animation: rise .55s cubic-bezier(.22,.68,0,1.15) both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Icon — matching homepage .svc-icon style but red */
+    .shield-icon {
+      width: 72px; height: 72px;
+      background: rgba(239,68,68,.09);
+      border: 1.5px solid rgba(239,68,68,.2);
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 1.8rem; color: var(--red);
+      position: relative;
+    }
+
+    .shield-icon::after {
+      content: '';
+      position: absolute; inset: -10px; border-radius: 24px;
+      border: 1px solid rgba(239,68,68,.1);
+      animation: ring 2.8s ease-in-out infinite;
+    }
+
+    @keyframes ring {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0; transform: scale(1.12); }
+    }
+
+    /* Section label style — exact homepage */
+    .page-label {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(239,68,68,.09);
+      border: 1px solid rgba(239,68,68,.2);
+      color: var(--red);
+      padding: 5px 14px; border-radius: 20px;
+      font-size: 12px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.9rem, 5vw, 2.8rem);
+      font-weight: 800; line-height: 1.2;
+      color: var(--text); margin-bottom: 14px;
+    }
+
+    h1 em { font-style: normal; color: var(--red); }
+
+    p.lead {
+      font-size: .97rem; color: var(--text2);
+      line-height: 1.75; margin-bottom: 36px;
+      max-width: 400px; margin-left: auto; margin-right: auto;
+    }
+
+    /* How-to card — matches .svc-card style */
+    .how-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .how-card-head {
+      padding: 16px 24px 0;
+      font-size: .6rem; letter-spacing: 1.8px;
+      text-transform: uppercase; color: var(--text2); font-weight: 700;
+    }
+
+    .how-row {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      transition: var(--tr);
+    }
+    .how-row:last-child { border-bottom: none; }
+    .how-row:hover { background: rgba(245,158,11,.03); }
+
+    /* Icon — exact .sp-icon style */
+    .how-icon {
+      width: 42px; height: 42px; flex-shrink: 0;
+      background: rgba(245,158,11,.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; color: var(--gold);
+    }
+
+    .how-text { flex: 1; padding-top: 2px; }
+    .how-label { font-size: .9rem; font-weight: 600; color: var(--text); margin-bottom: 3px; }
+    .how-desc  { font-size: .8rem; color: var(--text2); line-height: 1.5; }
+
+    /* CTA button — exact .btn-primary */
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      font-family: var(--font-body); font-weight: 700; font-size: 16px;
+      padding: 14px 32px; border-radius: 10px; border: none; cursor: pointer;
+      transition: var(--tr);
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 18px;
+    }
+    .btn-primary:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245,158,11,.35);
+    }
+
+    .foot-note { font-size: .75rem; color: var(--text2); line-height: 1.65; }
+    .foot-note a { color: var(--gold); font-weight: 600; }
+    .foot-note a:hover { color: var(--gold2); }
+
+    /* ── Footer ── */
+    .site-footer { background: var(--navy); padding: 64px 0 24px; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+    .footer-logo { font-family: var(--font-head); font-size: 24px; font-weight: 800; color: #fff; margin-bottom: 14px; }
+    .footer-logo .gld { color: var(--gold); }
+    .footer-logo .grn { color: var(--green); font-size: 13px; vertical-align: super; }
+    .footer-about { font-size: 14px; color: rgba(255,255,255,.5); line-height: 1.7; margin-bottom: 20px; }
+    .social-row { display: flex; gap: 10px; }
+    .social-btn { width: 38px; height: 38px; border-radius: 8px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.6); display: flex; align-items: center; justify-content: center; font-size: 16px; transition: var(--tr); }
+    .social-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+    .footer-heading { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 18px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links li a, .footer-links li { font-size: 14px; color: rgba(255,255,255,.55); transition: color .2s; display: flex; align-items: center; gap: 8px; }
+    .footer-links li a:hover { color: var(--gold); }
+    .footer-links li i { color: var(--gold); width: 14px; flex-shrink: 0; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .footer-bottom p, .footer-bottom a { font-size: 13px; color: rgba(255,255,255,.35); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    /* WhatsApp */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
+    .wa-pulse { position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(37,211,102,.4); animation: wa-ring 2s infinite; }
+    @keyframes wa-ring { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+    .wa-btn { width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 26px; box-shadow: 0 6px 20px rgba(37,211,102,.45); transition: var(--tr); }
+    .wa-btn:hover { transform: scale(1.1); }
+
+    @media (max-width: 768px) {
+      .nav-links, .btn-book { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="site-header" id="siteHeader">
+    <div class="hdr">
+      <a href="https://www.quickfixx24.com/" class="logo">
+        <img src="https://www.quickfixx24.com/assets/images/logo-icon.png" alt="QuickFixx24 Logo" onerror="this.style.display='none'" />
+        <span class="logo-txt">Quick<span class="gld">fixx</span><span class="grn">24</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://www.quickfixx24.com/#services">Services</a></li>
+        <li><a href="https://www.quickfixx24.com/#why-us">Why Us</a></li>
+        <li><a href="https://www.quickfixx24.com/#faq">FAQ</a></li>
+        <li><a href="https://www.quickfixx24.com/#reviews">Reviews</a></li>
+        <li><a href="https://www.quickfixx24.com/reviews.html">All Reviews</a></li>
+      </ul>
+      <div class="hdr-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <a href="https://www.quickfixx24.com/#booking" class="btn-book"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="https://www.quickfixx24.com/#services">Services</a>
+      <a href="https://www.quickfixx24.com/#why-us">Why Us</a>
+      <a href="https://www.quickfixx24.com/#faq">FAQ</a>
+      <a href="https://www.quickfixx24.com/#reviews">Reviews</a>
+      <a href="https://www.quickfixx24.com/reviews.html">All Reviews</a>
+      <a href="https://www.quickfixx24.com/#booking"><i class="fas fa-calendar-check"></i> Book Now</a>
+    </nav>
+  </header>
+
+  <!-- ── Main ── -->
+  <main class="page-main" role="main">
+    <div class="content-wrap">
+
+      <div class="shield-icon" aria-hidden="true">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+
+      <div class="page-label">
+        <i class="fas fa-lock"></i>
+        Access Restricted
+      </div>
+
+      <h1>Unauthorised<br><em>Access</em></h1>
+
+      <p class="lead">
+        This portal is accessible only by scanning a valid QuickFixx24 staff QR code.
+        Direct browsing is not permitted.
+      </p>
+
+      <div class="how-card">
+        <div class="how-card-head">How to verify a staff member</div>
+
+        <div class="how-row">
+          <div class="how-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="how-text">
+            <div class="how-label">Open your camera</div>
+            <div class="how-desc">Use your phone's native camera app or any QR scanner.</div>
+          </div>
+        </div>
+
+        <div class="how-row">
+          <div class="how-icon"><i class="fas fa-qrcode"></i></div>
+          <div class="how-text">
+            <div class="how-label">Scan the staff QR code</div>
+            <div class="how-desc">Point your camera at the QR code on their physical ID card.</div>
+          </div>
+        </div>
+
+        <div class="how-row">
+          <div class="how-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="how-text">
+            <div class="how-label">View verified profile</div>
+            <div class="how-desc">Their official credential page opens instantly in your browser.</div>
+          </div>
+        </div>
+
+      </div><!-- /.how-card -->
+
+      <a href="https://www.quickfixx24.com/" class="btn-primary">
+        <i class="fas fa-home"></i>
+        Return to QuickFixx24.com
+      </a>
+
+      <p class="foot-note">
+        If you believe this is an error, contact us via<br>
+        <a href="https://wa.me/8801805455811" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        &nbsp;or call
+        <a href="tel:+8801805455811">+880 1805-455811</a>
+      </p>
+
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Quick<span class="gld">fixx</span><span class="grn">24</span></div>
+          <p class="footer-about">Chittagong&rsquo;s trusted 24/7 vehicle booking and home services provider. Fast, professional, affordable.</p>
+          <div class="social-row">
+            <a href="https://www.facebook.com/quickfixx24" class="social-btn" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/quickfixx24" class="social-btn" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/quickfixx24" class="social-btn" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@quickfixx24" class="social-btn" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@quickfixx24" class="social-btn" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <ul class="footer-links">
+            <li><a href="https://www.quickfixx24.com/#services"><i class="fas fa-car"></i>Car Booking</a></li>
+            <li><a href="https://www.quickfixx24.com/#services"><i class="fas fa-taxi"></i>CNG Booking</a></li>
+            <li><a href="https://www.quickfixx24.com/#services"><i class="fas fa-bolt"></i>Electrical Repair</a></li>
+            <li><a href="https://www.quickfixx24.com/#services"><i class="fas fa-faucet"></i>Plumbing</a></li>
+            <li><a href="https://www.quickfixx24.com/#services"><i class="fas fa-snowflake"></i>AC Service</a></li>
+            <li><a href="https://www.quickfixx24.com/#services"><i class="fas fa-wifi"></i>Tech Setup</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone"></i><a href="tel:+8801805455811">+880 1805-455811</a></li>
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/8801805455811" target="_blank" rel="noopener">WhatsApp Us</a></li>
+            <li><i class="fas fa-map-marker-alt"></i>CU 1no Gate, Chittagong</li>
+            <li><i class="fas fa-clock"></i>Open 24/7, Every Day</li>
+            <li><i class="fas fa-star"></i>5.0 Google Rating</li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Company</div>
+          <ul class="footer-links">
+            <li><a href="https://www.quickfixx24.com/#why-us"><i class="fas fa-award"></i>Why QuickFixx24</a></li>
+            <li><a href="https://www.quickfixx24.com/reviews.html"><i class="fas fa-star"></i>Customer Reviews</a></li>
+            <li><a href="https://www.quickfixx24.com/#faq"><i class="fas fa-question-circle"></i>FAQ</a></li>
+            <li><a href="https://www.quickfixx24.com/terms.html"><i class="fas fa-file-alt"></i>Terms &amp; Conditions</a></li>
+            <li><a href="https://www.quickfixx24.com/privacy.html"><i class="fas fa-shield-alt"></i>Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 QuickFixx24. All rights reserved. | Chittagong, Bangladesh</p>
+        <p><a href="https://www.quickfixx24.com/terms.html">Terms</a> &middot; <a href="https://www.quickfixx24.com/privacy.html">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="wa-float">
+    <div class="wa-pulse"></div>
+    <a href="https://wa.me/8801805455811" class="wa-btn" target="_blank" rel="noopener" aria-label="WhatsApp QuickFixx24">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script>
+    const header = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 60));
+    const tt = document.getElementById('themeToggle');
+    const saved = localStorage.getItem('qf24-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    tt.innerHTML = saved === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    tt.addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('qf24-theme', next);
+      tt.innerHTML = next === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+    const hb = document.getElementById('hamburger'), mn = document.getElementById('mobileNav');
+    hb.addEventListener('click', () => mn.classList.toggle('open'));
+    mn.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mn.classList.remove('open')));
+  </script>
+
+</body>
+</html>
