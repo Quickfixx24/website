@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Karim Hossain — QuickFixx24 Staff Verification</title>
+  <meta name="description" content="Official staff verification for Md. Karim Hossain, Senior Driver at QuickFixx24, Chittagong.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="https://www.quickfixx24.com/assets/images/logo-icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+     /* ══ EXACT HOMEPAGE CSS VARIABLES ══════════════════════ */
+    :root {
+      --navy:       #0A0F1E;
+      --navy2:      #111827;
+      --gold:       #F59E0B;
+      --gold2:      #D97706;
+      --green:      #10B981;
+      --red:        #EF4444;
+      --silver:     #94A3B8;
+      --bg:         #F8FAFC;
+      --surface:    #FFFFFF;
+      --text:       #1E293B;
+      --text2:      #64748B;
+      --border:     #E2E8F0;
+      --font-head:  'Playfair Display', Georgia, serif;
+      --font-body:  'DM Sans', sans-serif;
+      --font-beng:  'Noto Sans Bengali', 'DM Sans', sans-serif;
+      --shadow:     0 4px 24px rgba(10,15,30,.08);
+      --shadow-lg:  0 12px 40px rgba(10,15,30,.14);
+      --radius:     14px;
+      --tr:         all .3s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg:      #0A0F1E;
+      --surface: #111827;
+      --text:    #F1F5F9;
+      --text2:   #94A3B8;
+      --border:  #1E293B;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background .3s, color .3s;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; }
+
+    /* ══ HEADER — exact homepage ══════════════════════════ */
+    .site-header {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 0;
+      transition: var(--tr);
+    }
+
+    [data-theme="dark"] .site-header { background: rgba(10,15,30,.92); }
+    .site-header.scrolled { padding: 10px 0; box-shadow: var(--shadow); }
+
+    .hdr {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo img { height: 44px; width: auto; border-radius: 8px; }
+    .logo-txt {
+      font-family: var(--font-head); font-size: 26px; font-weight: 700;
+      color: var(--navy);
+    }
+    [data-theme="dark"] .logo-txt { color: #F1F5F9; }
+    .logo-txt .gld { color: var(--gold); }
+    .logo-txt .grn { color: var(--green); font-size: 13px; vertical-align: super; }
+
+    .nav-links {
+      display: flex; gap: 28px; align-items: center; list-style: none;
+    }
+    .nav-links a {
+      font-size: 15px; font-weight: 500; color: var(--text); transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .hdr-actions { display: flex; align-items: center; gap: 10px; }
+
+    .btn-book {
+      background: var(--gold); color: var(--navy);
+      font-weight: 700; font-size: 14px;
+      padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer;
+      transition: var(--tr); white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 8px;
+      text-decoration: none;
+    }
+    .btn-book:hover { background: var(--gold2); transform: translateY(-1px); }
+
+    .theme-toggle {
+      background: none; border: 1.5px solid var(--border);
+      border-radius: 8px; width: 38px; height: 38px;
+      cursor: pointer; color: var(--text); font-size: 16px; transition: var(--tr);
+    }
+    .theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2.5px;
+      background: var(--text); border-radius: 2px; transition: var(--tr);
+    }
+
+    .mobile-nav {
+      display: none; flex-direction: column;
+      background: var(--surface); border-top: 1px solid var(--border);
+      padding: 20px 24px; gap: 14px;
+    }
+    .mobile-nav a {
+      font-size: 16px; font-weight: 500; color: var(--text);
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+    }
+    .mobile-nav a:last-child { border: none; color: var(--gold); font-weight: 700; }
+    .mobile-nav.open { display: flex; }
+
+    /* ══ PAGE CONTENT ══════════════════════════════════════ */
+    .page-main {
+      flex: 1;
+      margin-top: 73px; /* header height */
+      padding: 50px 24px 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Page header strip — matches homepage section-dark feel */
+    .verify-hero {
+      width: 100%; max-width: 700px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy2) 100%);
+      border-radius: var(--radius);
+      padding: 36px 40px 30px;
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+      animation: rise .5s cubic-bezier(.22,.68,0,1.15) both;
+    }
+
+    .verify-hero::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(245,158,11,.08);
+      pointer-events: none;
+    }
+
+    .verify-hero::after {
+      content: '';
+      position: absolute; bottom: -50px; left: -50px;
+      width: 140px; height: 140px; border-radius: 50%;
+      background: rgba(16,185,129,.06);
+      pointer-events: none;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .verify-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(245,158,11,.15);
+      border: 1px solid rgba(245,158,11,.3);
+      color: var(--gold);
+      padding: 5px 14px; border-radius: 20px;
+      font-size: 12px; font-weight: 700; letter-spacing: .8px;
+      text-transform: uppercase; margin-bottom: 18px;
+    }
+
+    .verify-hero .desig-label {
+      font-size: .6rem; letter-spacing: 2.5px;
+      text-transform: uppercase; color: rgba(255,255,255,.4);
+      margin-bottom: 6px;
+    }
+
+    .verify-hero .designation {
+      font-family: var(--font-head);
+      font-size: 2rem; font-weight: 800;
+      color: var(--gold); line-height: 1.2;
+      margin-bottom: 4px;
+    }
+
+    .verify-hero .desig-bengali {
+      font-family: var(--font-beng);
+      font-size: .9rem; font-weight: 500;
+      color: rgba(245,158,11,.55);
+      margin-bottom: 14px;
+    }
+
+    .staff-name-row {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+
+    .staff-name {
+      font-family: var(--font-head);
+      font-size: 1.35rem; font-weight: 700;
+      color: #fff;
+    }
+
+    /* Verified badge — gold/green style matching homepage trust items */
+    .verified-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 5px 12px; border-radius: 20px;
+      background: rgba(16,185,129,.15);
+      border: 1px solid rgba(16,185,129,.35);
+      font-size: .65rem; font-weight: 700;
+      letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--green); white-space: nowrap;
+    }
+
+    .pulse-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 6px var(--green);
+      flex-shrink: 0;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .3; transform: scale(.65); }
+    }
+
+    /* ══ ID CARD ══════════════════════════════════════════ */
+    .id-card {
+      width: 100%; max-width: 700px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      animation: rise .55s .1s cubic-bezier(.22,.68,0,1.15) both;
+      opacity: 0;
+    }
+
+    /* Gold top accent line — matches .svc-card::before */
+    .id-card::before {
+      content: '';
+      display: block; height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+    }
+
+    .card-body-inner { padding: 32px 36px; }
+
+    /* ── Profile row ── */
+    .profile-row {
+      display: flex; gap: 28px;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+
+    .photo-wrap {
+      flex-shrink: 0;
+      width: 100px; height: 124px;
+      border-radius: 10px; overflow: hidden;
+      border: 2px solid var(--border);
+      background: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .photo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+    }
+
+    .photo-placeholder {
+      display: flex; flex-direction: column;
+      align-items: center; gap: 7px;
+      color: var(--text2);
+    }
+    .photo-placeholder i { font-size: 2rem; opacity: .35; }
+    .photo-placeholder span { font-size: .6rem; color: var(--text2); letter-spacing: .5px; }
+
+    /* Info stack */
+    .info-stack { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+
+    .info-field { min-width: 0; }
+
+    .info-label {
+      font-size: .58rem; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--text2);
+      margin-bottom: 3px; font-weight: 600;
+    }
+
+    .info-value {
+      font-size: .92rem; font-weight: 600;
+      color: var(--text);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+
+    /* Employee ID — gold mono style */
+    .info-value.emp-id {
+      font-family: 'Courier New', monospace;
+      font-size: .84rem; letter-spacing: .8px;
+      color: var(--gold2); font-weight: 700;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px; background: var(--border);
+      margin: 0 0 24px;
+    }
+
+    /* ── Secondary fields grid ── */
+    .fields-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px 16px;
+    }
+
+    .field-full { grid-column: 1 / -1; }
+
+    /* Blood group badge */
+    .blood-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 4px 11px; border-radius: 20px;
+      background: rgba(239,68,68,.08);
+      border: 1px solid rgba(239,68,68,.2);
+      font-size: .8rem; font-weight: 700;
+      color: var(--red); letter-spacing: .5px;
+    }
+
+    /* Phone as tap-to-call */
+    a.phone-link { color: var(--text); font-weight: 600; }
+    a.phone-link:hover { color: var(--gold); }
+
+    /* Expiry with green dot */
+    .expiry-row { display: flex; align-items: center; gap: 7px; }
+    .expiry-dot {
+      width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+      background: var(--green); box-shadow: 0 0 5px rgba(16,185,129,.5);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    /* Cert tags — matching .svc-price pill style */
+    .cert-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+    .cert-tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(245,158,11,.09);
+      border: 1px solid rgba(245,158,11,.2);
+      color: var(--gold2); padding: 4px 10px; border-radius: 20px;
+      font-size: .68rem; font-weight: 600;
+    }
+    .cert-tag i { font-size: .6rem; }
+
+    /* ── Card Footer ── */
+    .card-footer {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 14px 36px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+
+    .id-chip { display: flex; flex-direction: column; gap: 1px; }
+    .id-chip-label {
+      font-size: .52rem; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--text2);
+    }
+    .id-chip-value {
+      font-family: 'Courier New', monospace;
+      font-size: .85rem; font-weight: 700;
+      letter-spacing: 1px; color: var(--gold2);
+    }
+
+    .org-mark { display: flex; align-items: center; gap: 10px; }
+    .org-mark img { width: 26px; height: 26px; border-radius: 6px; object-fit: contain; }
+    .org-mark-text { display: flex; flex-direction: column; align-items: flex-end; }
+    .org-name {
+      font-family: var(--font-head); font-size: .75rem;
+      font-weight: 700; color: var(--text);
+    }
+    .org-sub { font-size: .58rem; color: var(--text2); letter-spacing: .3px; }
+
+    /* ══ SCAN NOTICE ══════════════════════════════════════ */
+    .scan-notice {
+      max-width: 700px; width: 100%;
+      margin-top: 18px; text-align: center;
+      font-size: .72rem; color: var(--text2); line-height: 1.65;
+    }
+    .scan-notice a { color: var(--gold); font-weight: 600; }
+    .scan-notice a:hover { color: var(--gold2); }
+
+    /* ══ FOOTER — exact homepage ══════════════════════════ */
+    .site-footer { background: var(--navy); padding: 64px 0 24px; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 50px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-head); font-size: 24px;
+      font-weight: 800; color: #fff; margin-bottom: 14px;
+    }
+    .footer-logo .gld { color: var(--gold); }
+    .footer-logo .grn { color: var(--green); font-size: 13px; vertical-align: super; }
+
+    .footer-about {
+      font-size: 14px; color: rgba(255,255,255,.5);
+      line-height: 1.7; margin-bottom: 20px;
+    }
+
+    .social-row { display: flex; gap: 10px; }
+    .social-btn {
+      width: 38px; height: 38px; border-radius: 8px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.6);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; transition: var(--tr);
+    }
+    .social-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+
+    .footer-heading {
+      font-size: 12px; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; color: rgba(255,255,255,.35);
+      margin-bottom: 18px;
+    }
+
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-links li a,
+    .footer-links li {
+      font-size: 14px; color: rgba(255,255,255,.55);
+      transition: color .2s; display: flex; align-items: center; gap: 8px;
+    }
+    .footer-links li a:hover { color: var(--gold); }
+    .footer-links li i { color: var(--gold); width: 14px; flex-shrink: 0; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .footer-bottom p,
+    .footer-bottom a { font-size: 13px; color: rgba(255,255,255,.35); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    /* ══ WHATSAPP FLOAT — exact homepage ══════════════════ */
+    .wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 999; }
+    .wa-pulse {
+      position: absolute; inset: -6px; border-radius: 50%;
+      border: 2px solid rgba(37,211,102,.4);
+      animation: wa-ring 2s infinite;
+    }
+    @keyframes wa-ring {
+      0%   { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+    .wa-btn {
+      width: 58px; height: 58px;
+      background: #25D366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 26px;
+      box-shadow: 0 6px 20px rgba(37,211,102,.45);
+      transition: var(--tr);
+    }
+    .wa-btn:hover { transform: scale(1.1); }
+
+    /* ══ RESPONSIVE ════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .nav-links, .btn-book { display: none; }
+      .hamburger { display: flex; }
+      .card-body-inner { padding: 24px 20px; }
+      .card-footer { padding: 14px 20px; }
+      .profile-row { flex-direction: column; gap: 18px; }
+      .photo-wrap { width: 88px; height: 108px; }
+      .fields-grid { grid-template-columns: 1fr 1fr; }
+      .field-full { grid-column: 1 / -1; }
+      .verify-hero { padding: 28px 24px 24px; }
+      .verify-hero .designation { font-size: 1.6rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 500px) {
+      .fields-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header same as verification.html -->
+  <header class="site-header" id="siteHeader">...</header>
+
+  <main class="page-main">
+    <div class="verify-hero">
+      <div class="verify-label"><i class="fas fa-shield-alt"></i> Official Staff Credential</div>
+      <div class="desig-label">পদবী · Designation</div>
+      <div class="designation">Senior Driver</div>
+      <div class="desig-bengali">সিনিয়র চালক</div>
+      <div class="staff-name-row">
+        <span class="staff-name">Md. Karim Hossain</span>
+        <span class="verified-badge"><span class="pulse-dot"></span> Verified</span>
+      </div>
+    </div>
+
+    <div class="id-card">
+      <div class="card-body-inner">
+        <div class="profile-row">
+          <div class="photo-wrap">
+            <div class="photo-placeholder"><i class="fas fa-user-circle"></i><span>No Photo</span></div>
+          </div>
+          <div class="info-stack">
+            <div class="info-field"><div class="info-label">Department</div><div class="info-value">Vehicle Services</div></div>
+            <div class="info-field"><div class="info-label">Employee ID</div><div class="info-value emp-id">QFX-DRV-0001</div></div>
+            <div class="info-field"><div class="info-label">Member Since</div><div class="info-value">January 2023</div></div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="fields-grid">
+          <div class="info-field"><div class="info-label">Blood Group</div><div class="info-value"><span class="blood-badge"><i class="fas fa-tint"></i> B+</span></div></div>
+          <div class="info-field"><div class="info-label">Contact</div><div class="info-value"><a class="phone-link" href="tel:+8801805455811">+880 1805-455811</a></div></div>
+          <div class="info-field"><div class="info-label">Emergency</div><div class="info-value"><a class="phone-link" href="tel:+8801805455812">+880 1805-455812</a></div></div>
+          <div class="info-field"><div class="info-label">Valid Until</div><div class="info-value"><div class="expiry-row"><span class="expiry-dot"></span> December 2025</div></div></div>
+          <div class="info-field"><div class="info-label">Service Area</div><div class="info-value">Chittagong City</div></div>
+          <div class="info-field"><div class="info-label">Base</div><div class="info-value">CU Gate Base</div></div>
+          <div class="info-field field-full"><div class="info-label">Certifications & Skills</div><div class="cert-list"><span class="cert-tag"><i class="fas fa-check-circle"></i>BRTA Licensed</span><span class="cert-tag"><i class="fas fa-check-circle"></i>Defensive Driving</span><span class="cert-tag"><i class="fas fa-check-circle"></i>First Aid</span></div></div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="id-chip"><div class="id-chip-label">Staff ID</div><div class="id-chip-value">QFX-DRV-0001</div></div>
+        <div class="org-mark"><div class="org-mark-text"><span class="org-name">QuickFixx24</span><span class="org-sub">Chittagong, BD</span></div><img src="https://www.quickfixx24.com/assets/images/logo-icon.png" alt=""></div>
+      </div>
+    </div>
+    <p class="scan-notice">Official QuickFixx24 staff credential — for authorised verifiers only.<br><a href="https://www.quickfixx24.com/">quickfixx24.com</a> &nbsp;·&nbsp; <a href="https://quickfixx24.com/verify/karim-hossain.html">quickfixx24.com/verify/karim-hossain.html</a></p>
+  </main>
+
+  <!-- Footer same as verification.html -->
+  <footer class="site-footer">...</footer>
+  <div class="wa-float">...</div>
+  <script>/* আপনার original JS */</script>
+</body>
+</html>
