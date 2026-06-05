@@ -1,6 +1,7 @@
 title: "QuickFixx24"
 description: "Staff Verification Portal — QuickFixx24, Chittagong"
-url: "https://quickfixx24.github.io"
+baseurl: ""                      # ← EMPTY – no subdirectory, uses root domain
+url: "https://www.quickfixx24.com"   # Your custom domain
 
 # ── Collections ──────────────────────────────────────────────────
 collections:
