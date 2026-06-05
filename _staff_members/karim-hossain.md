@@ -13,4 +13,5 @@ location:           "CU Gate Base"
 valid_until:        "December 2025"
 certifications:     "BRTA Licensed, Defensive Driving, First Aid"
 photo_url:          ""
+slug: karim-hossain
 ---
