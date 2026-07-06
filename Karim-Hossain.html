@@ -403,7 +403,7 @@
     .scan-notice a:hover { color: var(--gold2); }
 
     /* ══ FOOTER — exact homepage ══════════════════════════ */
-    .site-footer { background: var(--navy); padding: 64px 0 24px; }
+    .site-footer { background: var(--navy); padding: 64px 0 24px; margin-top: 20px; }
 
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
@@ -504,9 +504,39 @@
   </style>
 </head>
 <body>
-  <!-- Header same as verification.html -->
-  <header class="site-header" id="siteHeader">...</header>
+  <!-- ═══ HEADER — FULLY POPULATED ═══ -->
+  <header class="site-header" id="siteHeader">
+    <div class="hdr">
+      <a href="https://www.quickfixx24.com/" class="logo" aria-label="QuickFixx24 Home">
+        <img src="https://www.quickfixx24.com/assets/images/logo-icon.png" alt="QuickFixx24 Icon" loading="lazy">
+        <span class="logo-txt">Quick<span class="gld">Fixx</span><span class="grn">24</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://www.quickfixx24.com/">Home</a></li>
+        <li><a href="https://www.quickfixx24.com/#services">Services</a></li>
+        <li><a href="https://www.quickfixx24.com/about.html">About</a></li>
+        <li><a href="https://www.quickfixx24.com/contact.html">Contact</a></li>
+      </ul>
+      <div class="hdr-actions">
+        <a href="https://www.quickfixx24.com/book.html" class="btn-book"><i class="fas fa-calendar-check"></i> Book Now</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="https://www.quickfixx24.com/">Home</a>
+      <a href="https://www.quickfixx24.com/#services">Services</a>
+      <a href="https://www.quickfixx24.com/about.html">About</a>
+      <a href="https://www.quickfixx24.com/contact.html">Contact</a>
+      <a href="https://www.quickfixx24.com/book.html"><i class="fas fa-calendar-check"></i> Book Now</a>
+    </nav>
+  </header>
 
+  <!-- ═══ MAIN CONTENT ═══ -->
   <main class="page-main">
     <div class="verify-hero">
       <div class="verify-label"><i class="fas fa-shield-alt"></i> Official Staff Credential</div>
@@ -523,7 +553,12 @@
       <div class="card-body-inner">
         <div class="profile-row">
           <div class="photo-wrap">
-            <div class="photo-placeholder"><i class="fas fa-user-circle"></i><span>No Photo</span></div>
+            <!-- ✅ REAL PHOTO – REPLACED PLACEHOLDER WITH IMG -->
+            <img src="assets/images/karim-hossain.jpg" alt="Md. Karim Hossain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-placeholder" style="display:none;">
+              <i class="fas fa-user-circle"></i>
+              <span>No Photo</span>
+            </div>
           </div>
           <div class="info-stack">
             <div class="info-field"><div class="info-label">Department</div><div class="info-value">Vehicle Services</div></div>
@@ -544,15 +579,169 @@
       </div>
       <div class="card-footer">
         <div class="id-chip"><div class="id-chip-label">Staff ID</div><div class="id-chip-value">QFX-DRV-0001</div></div>
-        <div class="org-mark"><div class="org-mark-text"><span class="org-name">QuickFixx24</span><span class="org-sub">Chittagong, BD</span></div><img src="https://www.quickfixx24.com/assets/images/logo-icon.png" alt=""></div>
+        <div class="org-mark">
+          <div class="org-mark-text"><span class="org-name">QuickFixx24</span><span class="org-sub">Chittagong, BD</span></div>
+          <img src="https://www.quickfixx24.com/assets/images/logo-icon.png" alt="QuickFixx24 Logo">
+        </div>
       </div>
     </div>
     <p class="scan-notice">Official QuickFixx24 staff credential — for authorised verifiers only.<br><a href="https://www.quickfixx24.com/">quickfixx24.com</a> &nbsp;·&nbsp; <a href="https://quickfixx24.com/verify/karim-hossain.html">quickfixx24.com/verify/karim-hossain.html</a></p>
   </main>
 
-  <!-- Footer same as verification.html -->
-  <footer class="site-footer">...</footer>
-  <div class="wa-float">...</div>
-  <script>/* আপনার original JS */</script>
+  <!-- ═══ FOOTER — FULLY POPULATED ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Quick<span class="gld">Fixx</span><span class="grn">24</span></div>
+          <p class="footer-about">QuickFixx24 is Chittagong's premier on-demand home service platform. We connect verified professionals with customers who need reliable plumbing, electrical, AC, and driving services — available 24/7.</p>
+          <div class="social-row">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="https://www.quickfixx24.com/"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="https://www.quickfixx24.com/#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+            <li><a href="https://www.quickfixx24.com/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="https://www.quickfixx24.com/contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Our Services</div>
+          <ul class="footer-links">
+            <li><i class="fas fa-wrench"></i> Plumbing</li>
+            <li><i class="fas fa-bolt"></i> Electrical</li>
+            <li><i class="fas fa-snowflake"></i> AC Repair</li>
+            <li><i class="fas fa-car"></i> Driving Services</li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-heading">Get in Touch</div>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone-alt"></i> <a href="tel:+8801805455800">+880 1805-455800</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@quickfixx24.com">info@quickfixx24.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> CU Gate, Chittagong, BD</li>
+            <li><i class="fas fa-clock"></i> 24/7 Available</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 <a href="https://www.quickfixx24.com/">QuickFixx24</a>. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> &middot; <a href="#">Terms of Service</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP FLOAT ═══ -->
+  <div class="wa-float">
+    <div class="wa-pulse"></div>
+    <a href="https://wa.me/8801805455800?text=Hi%20QuickFixx24%2C%20I%20need%20help!" class="wa-btn" aria-label="Chat on WhatsApp" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- ═══ JAVASCRIPT — FULLY WORKING ═══ -->
+  <script>
+    (function() {
+      "use strict";
+
+      // ----- DARK MODE TOGGLE -----
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const html = document.documentElement;
+
+      // Load saved theme
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+        updateIcon(savedTheme);
+      } else {
+        // Fallback: system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const defaultTheme = prefersDark ? 'dark' : 'light';
+        html.setAttribute('data-theme', defaultTheme);
+        updateIcon(defaultTheme);
+      }
+
+      function updateIcon(theme) {
+        if (theme === 'dark') {
+          themeIcon.className = 'fas fa-sun';
+        } else {
+          themeIcon.className = 'fas fa-moon';
+        }
+      }
+
+      themeToggle.addEventListener('click', function() {
+        const current = html.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        html.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateIcon(next);
+      });
+
+      // ----- HAMBURGER MENU -----
+      const hamburger = document.getElementById('hamburgerBtn');
+      const mobileNav = document.getElementById('mobileNav');
+
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        mobileNav.classList.toggle('open');
+        // Optional: animate hamburger to X (just for better UX)
+        const spans = this.querySelectorAll('span');
+        if (mobileNav.classList.contains('open')) {
+          spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+          spans[1].style.opacity = '0';
+          spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+        } else {
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        }
+      });
+
+      // Close mobile nav on link click
+      mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          mobileNav.classList.remove('open');
+          const spans = hamburger.querySelectorAll('span');
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        });
+      });
+
+      // Close mobile nav if clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.hdr') && !e.target.closest('.mobile-nav')) {
+          mobileNav.classList.remove('open');
+          const spans = hamburger.querySelectorAll('span');
+          spans[0].style.transform = 'none';
+          spans[1].style.opacity = '1';
+          spans[2].style.transform = 'none';
+        }
+      });
+
+      // ----- STICKY HEADER SHADOW -----
+      const header = document.getElementById('siteHeader');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScroll = currentScroll;
+      });
+
+    })();
+  </script>
+
 </body>
 </html>
